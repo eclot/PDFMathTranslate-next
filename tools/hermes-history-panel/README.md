@@ -7,7 +7,7 @@
 
 ## 这个分支是什么
 本分支只**新增** `tools/hermes-history-panel/`，**不改动上游任何文件** —— 因此 `git merge upstream/main` 永不冲突。
-`dist/gui.py` 是可直接使用的成品（打好补丁的 gui.py），`build.sh` 可从上游原版重新生成。
+`artifact/gui.py` 是可直接使用的成品（打好补丁的 gui.py），`build.sh` 可从上游原版重新生成。
 
 分支：`hermes/history-panel`；上游：`PDFMathTranslate-next/PDFMathTranslate-next`；兼容基线：**v2.9.0**。
 

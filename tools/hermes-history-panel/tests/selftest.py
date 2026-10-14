@@ -32,7 +32,7 @@ try:
     assert "/p2z-hist" in ent and "次翻译" in ent, ent[:120]
 
     # 3) 补丁能编译
-    patched = subprocess.run([sys.executable, f"{ROOT}/apply.py", os.path.join(os.path.dirname(ROOT), "pdf2zh_next", "gui.py"),
+    patched = subprocess.run([sys.executable, f"{ROOT}/apply.py", os.path.join(os.path.dirname(os.path.dirname(ROOT)), "pdf2zh_next", "gui.py"),
                               "--out", f"{tmp}/gui_patched.py"], capture_output=True, text=True)
     assert patched.returncode == 0, patched.stderr
     assert "hermes-hist-entry" in open(f"{tmp}/gui_patched.py", encoding="utf-8").read()
