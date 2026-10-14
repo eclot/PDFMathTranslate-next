@@ -1,3 +1,25 @@
+<!-- hermes-patch-note -->
+> ## ⚠️ 本分支不是上游代码：`hermes/history-panel`（Hermes 补丁）
+>
+> 本分支**只新增** `tools/hermes-history-panel/`，为 pdf2zh-next 的 Gradio 界面补两个功能，**全部运行在 7860 端口**：
+>
+> 1. **独立翻译历史页** `/p2z-hist`：每次打开即时重扫生成，按"每次翻译"一张卡片列出该次全部产物（原文 / 中英对照 dual / 纯中文 mono）+ 时间 + 大小，点文件名直接下载。
+> 2. **每个文件一个删除按钮**（同源 `POST /p2z-del`）：确认后删除并立即重生成页面。
+>
+> | 想干什么 | 去哪 |
+> |---|---|
+> | 看说明与硬规则 | [`tools/hermes-history-panel/README.md`](tools/hermes-history-panel/README.md) |
+> | 直接拿成品（打好补丁的 gui.py） | [`tools/hermes-history-panel/artifact/gui.py`](tools/hermes-history-panel/artifact/gui.py) |
+> | 上游更新后重建 | `./tools/hermes-history-panel/build.sh` |
+> | 变更历史 | [`tools/hermes-history-panel/CHANGELOG.md`](tools/hermes-history-panel/CHANGELOG.md) |
+>
+> **上游文件一律未改**（本段除外），因此 `git fetch upstream && git merge upstream/main` 不会冲突。
+> `main` 分支保持与上游一致；补丁只在 `hermes/history-panel` 分支。
+>
+> 以下为上游 README 原文，未作改动。
+
+---
+
 <div align="center">
 
 <img src="./docs/images/banner.png" width="320px"  alt="banner"/>
